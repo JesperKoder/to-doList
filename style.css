@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  background-image: url(table.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* TODO CONTAINER */
+.todo {
+  display: grid;
+  grid-template-areas: "title title" "input input" "list list";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 30px 1fr;
+  background-color: rgb(247, 212, 146);
+  /* border: 1px solid black; */
+  width: 25rem;
+  height: 20rem;
+  margin: 50px auto;
+  padding: 10px;
+}
+
+.title {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* INPUT CONTAINER IN TODO CONTAINER */
+.input-container {
+  grid-area: input;
+  display: flex;
+  align-items: center;
+}
+
+.text-input {
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  background-color: rgb(247, 212, 146);
+  border: 1px solid black;
+  color: black;
+  border-radius: 10px 0 0 10px;
+}
+
+.text-input:focus,
+.btn-input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(244, 179, 40, 0.5);
+}
+
+/* TODO CONTAINER */
+.btn-input {
+  width: 50px;
+  height: 30px;
+  background-color: rgb(247, 212, 146);
+  color: black;
+  border: 1px solid black;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-input:hover {
+  background-color: rgb(227, 187, 111); /* Change background color on hover */
+}
+
+/* TASK LIST */
+.task-list {
+  grid-area: list;
+  text-decoration: underline;
+  line-height: 1.5;
+  padding-left: 10px;
+}
+
+.remove-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #c0392b;
+}
